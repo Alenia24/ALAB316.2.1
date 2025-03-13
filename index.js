@@ -1,7 +1,7 @@
-let nameEl
+let nameEl;
 setTimeout(() => {
   nameEl = prompt(`Enter your player name`);
-}, 5000);
+}, 2000);
 
 let imageEl = document.querySelector(".image");
 let titleEl = document.querySelector("#title");
@@ -13,19 +13,25 @@ let guess;
 setTimeout(() => {
   guess = Number(prompt("Guess a number between 1 and 25!"));
   checkGuess();
-}, 5000);
+}, 3000);
 
 function checkGuess() {
-  if (guess >= 1 && guess <= 25 && guess !== number && guessCount > 0) {
+  if (guess >= 1 && guess <= 25 && guess !== number && guessCount >= 0) {
     titleEl.innerHTML = `<h1>Wrong Guess ! 😂😂😂</h1>`;
     imageEl.innerHTML = `<img
         class="img-fluid"
         src="https://media.giphy.com/media/fUYhyT9IjftxrxJXcE/giphy.gif?cid=790b7611ukolnshvv3t53liyc1i144asklshft0p1ofqu9o2&ep=v1_gifs_search&rid=giphy.gif&ct=g"
         alt=""
-        width=300
+        width=400
         style="border-radius: 8px"
       />`;
-    setTimeout(tryAgain(), 500);
+    setTimeout(tryAgain(), 6000);
+  } else if (guess > 25 && guess !== number && guessCount > 0) {
+    alert(`You must enter a number between 1 and 25!`)
+    guess = Number(
+      prompt("Guess a number between 1 and 25!")
+    );
+    checkGuess();
   } else {
     if (guess === number) {
       titleEl.innerHTML = `<h1>You won ${nameEl}!</h1>`;
