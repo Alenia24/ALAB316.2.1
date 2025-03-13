@@ -9,7 +9,7 @@ body {
   text-align: center;
   background-color: #e6e7d1;
   border-radius: 8px;
-  padding: 30px;
+  padding: 20px;
 }
 
 #title {
@@ -42,4 +42,8 @@ tr {
   display: flex;
   justify-content: space-between;
   margin: 5px;
+}
+
+footer {
+  margin: 25px 0 0;
 }
