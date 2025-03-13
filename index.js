@@ -18,7 +18,13 @@ setTimeout(() => {
 function checkGuess() {
   if (guess >= 1 && guess <= 25 && guess !== number && guessCount > 0) {
     titleEl.innerHTML = `<h1>Wrong Guess ! 😂😂😂</h1>`;
-
+    imageEl.innerHTML = `<img
+        class="img-fluid"
+        src="https://media.giphy.com/media/fUYhyT9IjftxrxJXcE/giphy.gif?cid=790b7611ukolnshvv3t53liyc1i144asklshft0p1ofqu9o2&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+        alt=""
+        width=300
+        style="border-radius: 8px"
+      />`;
     setTimeout(tryAgain(), 500);
   } else {
     if (guess === number) {
