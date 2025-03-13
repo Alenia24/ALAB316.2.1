@@ -22,7 +22,7 @@ function checkGuess() {
         class="img-fluid"
         src="https://media.giphy.com/media/fUYhyT9IjftxrxJXcE/giphy.gif?cid=790b7611ukolnshvv3t53liyc1i144asklshft0p1ofqu9o2&ep=v1_gifs_search&rid=giphy.gif&ct=g"
         alt=""
-        width=400
+        width=300
         style="border-radius: 8px"
       />`;
     setTimeout(tryAgain(), 6000);
@@ -40,6 +40,7 @@ function checkGuess() {
         class="img-fluid"
         src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXM3Y3V5eXVyZmFvMmdqNGR5aHpta3QwOGVyYnAxc2RrdmthbTN2dyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/d3mlE7uhX8KFgEmY/giphy.gif"
         alt=""
+        width=300
         style="border-radius: 8px"
       />`;
     } else {
