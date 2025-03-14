@@ -16,7 +16,7 @@ setTimeout(() => {
 }, 3000);
 
 function checkGuess() {
-  if (guess >= 1 && guess <= 25 && guess !== number && guessCount >= 0) {
+  if (guess >= 1 && guess <= 25 && guess !== number && guessCount > 1) {
     titleEl.innerHTML = `<h1>Wrong Guess ! 😂😂😂</h1>`;
     imageEl.innerHTML = `<img
         class="img-fluid"
@@ -27,10 +27,8 @@ function checkGuess() {
       />`;
     setTimeout(tryAgain(), 6000);
   } else if (guess > 25 && guess !== number && guessCount > 0) {
-    alert(`You must enter a number between 1 and 25!`)
-    guess = Number(
-      prompt("Guess a number between 1 and 25!")
-    );
+    alert(`You must enter a number between 1 and 25!`);
+    guess = Number(prompt("Guess a number between 1 and 25!"));
     checkGuess();
   } else {
     if (guess === number) {
@@ -44,6 +42,8 @@ function checkGuess() {
         style="border-radius: 8px"
       />`;
     } else {
+      guessCount--;
+      guessEl.innerHTML = `<h6>You have ${guessCount} guess(es) remaining ${nameEl}!</h6>`;
       titleEl.innerHTML = `<h1>You loose ${nameEl}!</h1>`;
       alert(`The number was ${number}`);
       imageEl.innerHTML = `<img
